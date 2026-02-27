@@ -21,6 +21,9 @@ services:
     environment:
       - DATABASE_URL=${DATABASE_URL}
       - JWT_SECRET=${JWT_SECRET:-YourSuperSecretKeyThatShouldBeAtLeast32CharactersLong!}
+      - Jwt__Secret=${JWT_SECRET:-YourSuperSecretKeyThatShouldBeAtLeast32CharactersLong!}
+      - Jwt__Issuer=WorkshopApi
+      - Jwt__Audience=WorkshopApp
       - ALLOWED_ORIGINS=${ALLOWED_ORIGINS:-*}
       - ASPNETCORE_ENVIRONMENT=Production
     restart: unless-stopped
