@@ -1,0 +1,6 @@
+.env
+*.log
+node_modules/
+package.json
+package-lock.json
+run-sql.js
